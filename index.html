@@ -21,12 +21,19 @@
   </head>
 
   <body>
-    <header class="header hide">
+    <header class="header">
       <div class="container header-container">
         <nav class="nav">
           <a href="./index.html" class="logo top"
             >Web<span class="studio-header">Studio</span></a
           >
+
+          <button class="mobile-menu-btn" type="button" menu-mobile-open>
+            <svg class="" width="24" height="24">
+              <use href="./images/icons.svg#icon-mobile-menu"></use>
+            </svg>
+          </button>
+
           <ul class="nav-list">
             <li>
               <a href="./index.html" class="nav-list-item active">Studio</a>
@@ -695,6 +702,87 @@
           <button class="btn" type="button">Send</button>
         </form>
       </div>
+    </div>
+
+    <div class="mobile-menu" menu-mobilel>
+      <button class="mobile-menu-close" type="button" menu-mobile-close>
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li><a href=""></a>Studio</li>
+        <li><a href=""></a>Portfolio</li>
+        <li><a href=""></a>Contacts</li>
+      </ul>
+
+      <ul class="address-list-mobile">
+        <li>
+          <a href="mailto:info@devstudio.com" class="address-list-item"
+            >info@devstudio.com
+          </a>
+        </li>
+        <li>
+          <a href="tel:+110001111111" class="address-list-item"
+            >+11 (000) 111-11-11
+          </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-social-icons">
+        <li class="social-icons-item">
+          <a
+            class="social-link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="Link to Instagram"
+          >
+            <svg class="team-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-icons-item">
+          <a
+            class="social-link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="Link to Twitter"
+          >
+            <svg class="team-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-icons-item">
+          <a
+            class="social-link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="Link to Facebook"
+          >
+            <svg class="team-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-icons-item">
+          <a
+            class="social-link"
+            href=""
+            target="_blank"
+            rel="noopener no-referrer"
+            aria-label="Link to LinkedIn"
+          >
+            <svg class="team-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <script src="./js/index.js"></script>
