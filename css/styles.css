@@ -148,6 +148,12 @@ a {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .active {
+    color: #404bbf;
+  }
+}
+
 .nav-list-item.active {
   color: #404bbf;
 }
@@ -218,6 +224,23 @@ a {
 @media (hover: hover) {
   .address-list-item:hover,
   .address-list-item:focus {
+    color: #4d5ae5;
+  }
+}
+
+@media only screen and (min-width: 768px) and (hover: hover) {
+  .address-list-item:hover,
+  .address-list-item:focus {
+    color: #404bbf;
+  }
+}
+
+.address-list-item:active {
+  color: #4d5ae5;
+}
+
+@media only screen and (min-width: 768px) {
+  .address-list-item:active {
     color: #404bbf;
   }
 }
@@ -240,11 +263,8 @@ a {
   margin: 0 auto;
 }
 
-.hero-container {
-}
-
 .hero-title {
-  max-width: 496px;
+  width: 216px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -252,13 +272,16 @@ a {
   color: #ffffff;
   margin: 0 auto;
   margin-bottom: 72px;
+  padding: 0 23px;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-title {
+    max-width: 496px;
     margin-bottom: 36px;
     font-size: 56px;
     line-height: 1.07;
+    padding: 0;
   }
 }
 
@@ -288,10 +311,13 @@ a {
   transition-property: background-color;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #404bbf;
+@media (hover: hover) {
+  .btn:hover,
+  .btn:focus {
+    background-color: #404bbf;
+  }
 }
+
 /* #endregion */
 
 /* #region  section-one*/
@@ -973,10 +999,29 @@ input[type='checkbox']:checked + .modal-agreement-text .modal-checkbox {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: auto;
+}
+
+.mobile-menu-item {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  margin-bottom: auto;
+  color: #2e2f42;
+}
+
+.active-menu {
+  color: #404bbf;
+}
+
+@media (hover: hover) {
+  .mobile-menu-item:hover,
+  .mobile-menu-item:focus {
+    color: #404bbf;
+  }
+}
+
+.mobile-menu-item:active {
+  color: #404bbf;
 }
 
 .address-list-mobile {
@@ -984,6 +1029,10 @@ input[type='checkbox']:checked + .modal-agreement-text .modal-checkbox {
   flex-direction: column;
   gap: 24px;
   margin-bottom: 48px;
+}
+
+.active-address {
+  color: #4d5ae5;
 }
 
 .mobile-social-icons {
