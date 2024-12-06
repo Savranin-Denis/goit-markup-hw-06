@@ -721,16 +721,51 @@ a {
 /* #region  footer*/
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 96px 108px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-first-colomn {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-first-colomn {
+    align-items: start;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-first-colomn {
+    margin-right: 120px;
+  }
 }
 
 .logo .studio-footer {
@@ -744,22 +779,49 @@ a {
 
 .footer-text {
   color: #f4f4fd;
-  width: 264px;
+  width: 288px;
+}
+
+@media only screen and (max-width: 1157px) {
+  .footer-text {
+    margin-bottom: 72px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    width: 264px;
+  }
 }
 
 .footer-second-colomn {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.social-desc {
-  color: #ffffff;
-  margin-bottom: 16px;
-  font-weight: 500;
+@media only screen and (min-width: 768px) {
+  .footer-second-colomn {
+    align-items: start;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-second-colomn {
+    margin-right: 80px;
+  }
 }
 
 .footer-social-icons {
   display: flex;
   gap: 16px;
+  margin-bottom: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-social-icons {
+    margin-bottom: 0;
+  }
 }
 
 .social-link.basement {
@@ -767,26 +829,45 @@ a {
   transition-property: background-color;
 }
 
-.social-link.basement:hover,
-.social-link.basement:focus {
-  background-color: #31d0aa;
+@media (hover: hover) {
+  .social-link.basement:hover,
+  .social-link.basement:focus {
+    background-color: #31d0aa;
+  }
 }
 
-.footer-third-colomn {
-}
 .social-desc {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: 500;
+  text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+  .social-desc {
+    text-align: start;
+  }
+}
+
 .subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
-.subscribe-label {
+
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .subscribe-input {
   border: 1px solid #ffffff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   outline: transparent;
   background-color: transparent;
@@ -797,6 +878,12 @@ a {
   color: #ffffff;
   padding: 8px 16px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
 }
 
 .subscribe-input::placeholder {
@@ -810,7 +897,7 @@ a {
   letter-spacing: 0.04em;
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   background: #4d5ae5;
   display: flex;
@@ -865,10 +952,17 @@ a {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   padding: 72px 24px 24px;
-  min-width: 408px;
-  min-height: 584px;
+  min-width: 288px;
+  min-height: 623px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    min-width: 408px;
+    min-height: 584px;
+  }
 }
 
 .modal-close {
@@ -894,15 +988,19 @@ a {
   transition-property: fill;
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  border: none;
-  background-color: #404bbf;
+@media (hover: hover) {
+  .modal-close:hover,
+  .modal-close:focus {
+    border: none;
+    background-color: #404bbf;
+  }
 }
 
-.modal-close:hover .close-icon,
-.modal-close:focus .close-icon {
-  fill: #ffffff;
+@media (hover: hover) {
+  .modal-close:hover .close-icon,
+  .modal-close:focus .close-icon {
+    fill: #ffffff;
+  }
 }
 
 .modal-text {
@@ -1007,11 +1105,15 @@ input[type='checkbox']:checked + .modal-agreement-text .modal-checkbox {
   letter-spacing: 0.04em;
   color: #8e8f99;
   user-select: none;
+  display: flex;
+  align-items: center;
+  min-width: 256px;
 }
 
 .modal-checkbox {
   display: inline-flex;
   justify-content: center;
+  flex-shrink: 0;
   align-items: center;
   width: 16px;
   height: 16px;
