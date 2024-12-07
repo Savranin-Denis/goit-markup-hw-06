@@ -35,7 +35,7 @@
     // Додати атрибут data-modal-close на кнопку закриття
     closeMenuBtn: document.querySelector('[menu-mobile-close]'),
     // Додати атрибут data-modal на бекдроп модалки
-    menubar: document.querySelector('[menu-mobilel]'),
+    menubar: document.querySelector('[menu-mobile]'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleModal);
